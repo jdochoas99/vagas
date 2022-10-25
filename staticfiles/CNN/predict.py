@@ -1,8 +1,8 @@
-from prediction import mkprediction
+from staticfiles.CNN.prediction import mkprediction
 
 
 def finalpredict():
-    with open('templates/main/teste.html', 'w') as t:
+    with open('main/teste.html', 'w') as t:
         a = mkprediction()
         t.write("{% extends 'index.html' %}")
         t.write('{% block rect %}')
