@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script type="test/javascript" src="{% static '/js/jquery-3.6.1.js' %}"></script>
+    <script type="test/javascript" src="{% static '/js/jquery.maphilight.min.js' %}"></script>
+    <script type="test/javascript">
+        jQuery(function(){
+            jQuery('.img-fluid').maphilight.defaults();
+        });
+    </script>
+</head>
+
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 808" >
+	<image width="1280 " height="808" xlink:href="{% static 'estacionamento.png' %}" >
+	</image>
+    <a>
+          {%block rect %}
+        {% endblock rect %}
+
+
+     <!--   <rect x="755" y="540" style="fill:rgb(0, 255, 0)" opacity="1" width="40" height="90" />
+        <rect x="710" y="540" style="fill:rgb(0, 255, 0)" opacity="1" width="40" height="90" />
+        <rect x="665" y="540" style="fill:rgb(255,0,0)" opacity="1" width="40" height="90" />
+        <rect x="620" y="540" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="575" y="540" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="530" y="540" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="485" y="540" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="440" y="540" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="395" y="540" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+
+        <rect x="395" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="440" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="485" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="530" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="575" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="620" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="665" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="710" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="755" y="447" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+
+        <rect x="395" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="440" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="485" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="530" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="575" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="620" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="665" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="710" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="755" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="800" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="845" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="890" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="935" y="271" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+
+        <rect x="935" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="890" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="845" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="800" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="755" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="710" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="665" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="620" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="575" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="530" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="485" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="440" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+        <rect x="395" y="178" style="fill:rgb(0,0,255)" opacity="1" width="40" height="90" />
+
+
+-->
+
+
+
+
+
+
+
+
+	</a>
+</svg>
+
+
+
+<!--<img src="{% static 'estacionamento.png' %}" class="img-fluid" usemap="#image-map">-->
+
+<map class="img-fluid" name="image-map">
+    <area target="" alt="0" title="0" href="" coords="1532,1529,1648,1776" shape="rect">
+    <area target="" alt="1" title="1" href="" coords="1404,1529,1524,1776" shape="rect">
+    <area target="" alt="2" title="2" href="" coords="1276,1530,1392,1779" shape="rect">
+    <area target="" alt="3" title="3" href="" coords="1149,1529,1269,1779" shape="rect">
+    <area target="" alt="4" title="4" href="" coords="1021,1529,1143,1779" shape="rect">
+    <area target="" alt="" title="" href="" coords="895,1531,1013,1779" shape="rect">
+    <area target="" alt="5" title="5" href="" coords="767,1531,883,1779" shape="rect">
+    <area target="" alt="6" title="6" href="" coords="641,1531,759,1781" shape="rect">
+    <area target="" alt="7" title="7" href="" coords="513,1531,631,1779" shape="rect">
+    <area target="" alt="8" title="8" href="" coords="513,1270,631,1518" shape="rect">
+    <area target="" alt="9" title="9" href="" coords="641,1270,759,1518" shape="rect">
+    <area target="" alt="10" title="10" href="" coords="767,1270,885,1518" shape="rect">
+    <area target="" alt="11" title="11" href="" coords="895,1270,1013,1518" shape="rect">
+    <area target="" alt="12" title="12" href="" coords="1023,1270,1139,1518" shape="rect">
+    <area target="" alt="13" title="13" href="" coords="1149,1270,1267,1518" shape="rect">
+    <area target="" alt="14" title="14" href="" coords="1277,1270,1393,1518" shape="rect">
+    <area target="" alt="15" title="15" href="" coords="1403,1270,1523,1520" shape="rect">
+    <area target="" alt="16" title="16" href="" coords="1531,1270,1649,1520" shape="rect">
+    <area target="" alt="17" title="17" href="" coords="515,769,630,1018" shape="rect">
+    <area target="" alt="18" title="18" href="" coords="643,768,758,1018" shape="rect">
+    <area target="" alt="19" title="19" href="" coords="767,767,886,1017" shape="rect">
+    <area target="" alt="" title="" href="" coords="895,768,1012,1018" shape="rect">
+    <area target="" alt="20" title="20" href="" coords="1023,768,1140,1017" shape="rect">
+    <area target="" alt="21" title="21" href="" coords="1149,768,1266,1018" shape="rect">
+    <area target="" alt="22" title="22" href="" coords="1277,768,1394,1018" shape="rect">
+    <area target="" alt="23" title="23" href="" coords="1403,767,1520,1018" shape="rect">
+    <area target="" alt="24" title="24" href="" coords="1531,768,1648,1017" shape="rect">
+    <area target="" alt="25" title="25" href="" coords="1657,767,1776,1018" shape="rect">
+    <area target="" alt="26" title="26" href="" coords="1785,767,1902,1017" shape="rect">
+    <area target="" alt="27" title="27" href="" coords="1913,767,2030,1018" shape="rect">
+    <area target="" alt="28" title="28" href="" coords="2039,769,2156,1017" shape="rect">
+    <area target="" alt="29" title="29" href="" coords="2041,507,2156,757" shape="rect">
+    <area target="" alt="30" title="30" href="" coords="1913,507,2030,760" shape="rect">
+    <area target="" alt="31" title="31" href="" coords="1787,508,1902,760" shape="rect">
+    <area target="" alt="32" title="32" href="" coords="1659,507,1776,760" shape="rect">
+    <area target="" alt="33" title="33" href="" coords="1531,506,1648,759" shape="rect">
+    <area target="" alt="34" title="34" href="" coords="1405,505,1520,759" shape="rect">
+    <area target="" alt="35" title="35" href="" coords="1277,505,1394,759" shape="rect">
+    <area target="" alt="36" title="36" href="" coords="1149,506,1266,760" shape="rect">
+    <area target="" alt="37" title="37" href="" coords="1023,506,1140,760" shape="rect">
+    <area target="" alt="38" title="38" href="" coords="895,506,1012,760" shape="rect">
+    <area target="" alt="39" title="39" href="" coords="769,506,886,759" shape="rect">
+    <area target="" alt="40" title="40" href="" coords="641,505,758,759" shape="rect">
+    <area target="" alt="41" title="41" href="" coords="515,506,630,760" shape="rect">
+</map>
+</body>
+</html>
