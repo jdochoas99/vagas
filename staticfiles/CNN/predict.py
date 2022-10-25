@@ -1,4 +1,4 @@
-from staticfiles.CNN.prediction import mkprediction
+from prediction import mkprediction
 
 
 def finalpredict():
@@ -14,5 +14,4 @@ def finalpredict():
         t.write('{% endblock rect %}')
         return 1
 
-finalpredict()
 
