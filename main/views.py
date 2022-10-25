@@ -6,4 +6,4 @@ def index(request):
     data = {}
     finalpredict()
     ##os.system('python staticfiles/CNN/predict.py')
-    return render(request, 'main/teste.html', data)
+    return render(request, 'main/vagas.html', data)
