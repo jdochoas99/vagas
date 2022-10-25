@@ -14,4 +14,5 @@ def finalpredict():
         t.write('{% endblock rect %}')
         return 1
 
+finalpredict()
 
