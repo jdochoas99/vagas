@@ -1,0 +1,73 @@
+include:
+  - project: ci-cd/templates
+    ref: production
+    file:
+      - deploy.okd.yml
+      - variables.yml
+
+stages:
+  - code-quality
+  - deploy
+
+variables:
+## VARIAVEIS PARA SONARQUBE
+  PROJECT_DISPLAY_NAME: "vagas"
+
+## VARI�VEL ESPECIFICA PARA PROJETO COM M�LTIPLAS SOLU��ES
+  PROJECT_DEPLOY: "multi-deploy"
+
+expopgprod-baymax:
+  extends: .multi_deploy
+  variables:
+    ## PROJETO
+    PROJECT_NAME: "vagas-baymax"
+    PROJECT_DISPLAY_NAME: "vagas baymax"
+
+    ## DOCKER
+    DOCKERFILE_PATH: "vagas/Dockerfile"
+
+    ## ROTA
+    ROUTER_PORT: "9187"
+    ROUTER_TERMINATION: "edge"
+
+    ## ROTA EXTRA DEVELOPMENT
+    ROUTER_HOSTNAME_DEVELOPMENT: >
+
+    ## ROTA EXTRA STAGING
+    ROUTER_HOSTNAME_STAGING: ""
+
+    ## ROTA EXTRA PRODUCTION
+    ROUTER_HOSTNAME_PRODUCTION: ""
+
+    ## VARIAVEIS DE AMBIENTE DEPLOY
+    DEPLOY_ENVIRONMENT: >
+      "TZ=America/Porto_Velho"
+
+# vagas:
+#   extends: .multi_deploy
+#   variables:
+#     ## PROJETO
+#     PROJECT_NAME: "vagas"
+#     PROJECT_DISPLAY_NAME: "vagas"
+
+#     ## DOCKER
+#     DOCKERFILE_PATH: "expopgprod/Dockerfile"
+
+#     ## ROTA
+#     ROUTER_PORT: "9187"
+#     ROUTER_TERMINATION: "edge"
+
+#     BUILD_ENVIRONMENT: "DATA_SOURCE_NAME=${DATA_SOURCE_NAMEexpopgprod}"
+
+#     ## ROTA EXTRA DEVELOPMENT
+#     ROUTER_HOSTNAME_DEVELOPMENT: >
+
+#     ## ROTA EXTRA STAGING
+#     ROUTER_HOSTNAME_STAGING: ""
+
+#     ## ROTA EXTRA PRODUCTION
+#     ROUTER_HOSTNAME_PRODUCTION: ""
+
+#     ## VARIAVEIS DE AMBIENTE DEPLOY
+#     DEPLOY_ENVIRONMENT: >
+#       "TZ=America/Porto_Velho"
